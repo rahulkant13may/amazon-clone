@@ -11,6 +11,66 @@ function Home() {
             />
             <div className="home__row">
                 <Product
+                    id="543454"
+                    title="Prestige Mixer Grinder, 550W, 3 Jars (Blue)"
+                    price={300}
+                    rating={3}
+                    image="https://m.media-amazon.com/images/I/51ukLK7j-JL._AC_UY218_.jpg"
+                />
+                <Product
+                    id="4343434"
+                    title="Apple Watch Series 3 (GPS, 42mm) - Space Grey Aluminium Case with Black Sport Band"
+                    price={500}
+                    rating={5}
+                    image="https://m.media-amazon.com/images/I/71EoGntO5bL._AC_UL320_.jpg"
+                />
+                <Product
+                    id="2343432"
+                    title="Maniac Men's Slim Fit T-Shirt"
+                    price={14}
+                    rating={4}
+                    image="https://m.media-amazon.com/images/I/718XqtJBcrL._AC_UY218_.jpg"
+                />
+                <Product
+                    id="2343432"
+                    title="Maniac Men's Slim Fit T-Shirt"
+                    price={14}
+                    rating={4}
+                    image="https://m.media-amazon.com/images/I/718XqtJBcrL._AC_UY218_.jpg"
+                />
+            </div>
+            <div className="home__row">
+                <Product
+                    id="543454"
+                    title="Prestige Mixer Grinder, 550W, 3 Jars (Blue)"
+                    price={300}
+                    rating={3}
+                    image="https://m.media-amazon.com/images/I/51ukLK7j-JL._AC_UY218_.jpg"
+                />
+                <Product
+                    id="4343434"
+                    title="Apple Watch Series 3 (GPS, 42mm) - Space Grey Aluminium Case with Black Sport Band"
+                    price={500}
+                    rating={5}
+                    image="https://m.media-amazon.com/images/I/71EoGntO5bL._AC_UL320_.jpg"
+                />
+                <Product
+                    id="2343432"
+                    title="Maniac Men's Slim Fit T-Shirt"
+                    price={14}
+                    rating={4}
+                    image="https://m.media-amazon.com/images/I/718XqtJBcrL._AC_UY218_.jpg"
+                />
+                <Product
+                    id="2343432"
+                    title="Maniac Men's Slim Fit T-Shirt"
+                    price={14}
+                    rating={4}
+                    image="https://m.media-amazon.com/images/I/718XqtJBcrL._AC_UY218_.jpg"
+                />
+            </div>
+            <div className="home__row">
+                <Product
                     id="1223232"
                     title="Do It Today: Overcome Procrastination, Improve Productivity, and Achieve More Meaningful Things Kindle Edition"
                     price={14}

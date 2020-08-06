@@ -41,9 +41,7 @@ function Checkout() {
             <div className="checkout__right">
                     <SubTotal/>
             </div>
-
-
-            </div>
+        </div>
     )
 }
 

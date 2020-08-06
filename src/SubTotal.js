@@ -26,7 +26,9 @@ function SubTotal() {
                     </>
                 )} 
         />
-           <button>Proceed to Checkout</button>    
+        {/* <span> */}
+            <button>Proceed to Checkout</button>    
+        {/* </span> */}
         </div>
     )
 }

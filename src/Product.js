@@ -1,8 +1,23 @@
 import React from 'react';
 import "./Product.css";
 import { Link } from '@material-ui/core';
+import { useStateValue } from './context/StateContext';
 
-function Product({title, price, rating, image}) {
+
+function Product({id, title, price, rating, image}) {
+    const [{basket}, dispatch] = useStateValue();
+    const addToBasket = () => {
+        dispatch({
+            type: "ADD_TO_BASKET",
+            item:{
+                id,
+                title,
+                price,
+                rating,
+                image
+            }
+        })
+    }
     return (
         <div className="product">
             <div className="product__info">
@@ -18,7 +33,7 @@ function Product({title, price, rating, image}) {
                         Array(rating)
                             .fill()
                             .map((_) => 
-                            <p>⭐</p>
+                            <span>⭐</span>
                             )
                     }
                 </p>
@@ -27,7 +42,7 @@ function Product({title, price, rating, image}) {
                 <img 
                     src={image}
                 />
-                <button>Add To Cart</button>
+                <button onClick={addToBasket} >Add To Cart</button>
             {/* </div>  */}
         </div>
     )

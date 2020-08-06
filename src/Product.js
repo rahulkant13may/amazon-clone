@@ -15,6 +15,7 @@ function Product({id, title, price, rating, image}) {
                 price,
                 rating,
                 image
+
             }
         })
     }

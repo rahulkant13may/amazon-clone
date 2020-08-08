@@ -9,9 +9,15 @@ function SignIn() {
     const history = useHistory();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [signInEmailFlag, unSetSignEmailFlag] = useState(true)
     const [rightIcon, toggleRightIcon] = useState(true)
 
-    const login = (event) => {
+    const continueButton = (event) => {
+        event.preventDefault();
+        unSetSignEmailFlag(false)
+    }
+
+    const signInButton = (event) => {
         event.preventDefault();
         auth.signInWithEmailAndPassword(email, password)
             .then((auth) => {
@@ -38,15 +44,17 @@ function SignIn() {
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon-logo.svg.png"
                 alt=""/>
             </Link>
-
-            <div className="login__container">
+            {
+            signInEmailFlag === true
+            ?
+            <div className="login__container email">
                 <h1>Sign In</h1>
                 <form>
                     <h5>Email (phone for mobile accounts)</h5>
                     <input value={email} onChange={event => setEmail(event.target.value)}type="text"/>
                     {/* <h5>Password</h5>
                     <input value={password} onChange={event => setPassword(event.target.value)} type="password"/> */}
-                    <button onClick={login} type="submit" className="login__signInButton">Continue</button>
+                    <button onClick={continueButton} type="submit" className="login__signInButton">Continue</button>
                 </form>
                 <p>
                     By continuing, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#"> Privacy Notice</a>.
@@ -62,11 +70,35 @@ function SignIn() {
                     <span><a href="#">Need help?</a></span>
                 </div>
             </div>
+            :
+            <div className="login__container password">
+                <h1>Sign In</h1>
+                <form>
+                    <div className="password__signInUser">
+                        <h5>{email}</h5>
+                        <h5><a href="">Change</a></h5>
+                    </div>
+                    <div className="password__heading">
+                        <h5>Password</h5>
+                        <h5>Forgot your password?</h5>
+                    </div>
+                    <input value={password} onChange={event => setPassword(event.target.value)} type="password"/>
+                    <button onClick={signInButton} type="submit" className="login__signInButton">Sign In</button>
+                </form>
+                <div className="password__keepSignIn">
+                    <input type="checkbox"/>
+                    <span>Keep me signed in.<a href="#">Detail</a></span>
+                </div>
+            </div>
+            }
+
+
         </div>
         <h5 className="signIn__newToAmazon"><span>New to Amazon?</span></h5>
         <div className="login__registerButton__container">
            <button onClick={register} type="submit" className="login__registerButton">Create your Amazon Account</button>
         </div>
+
         <div className="signIn__footer">
              <div className="signIn__footer__firstLine">
                 <a href="#">Conditions of Use</a>

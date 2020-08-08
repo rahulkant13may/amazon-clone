@@ -1,0 +1,182 @@
+
+.signIn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 22px;
+    width: 100%;
+    background-color: white;
+}
+.login{
+    background-color: white;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+
+.login__logo{
+    width: 100px;
+    object-fit: contain;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.login__container{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid lightgray;
+    
+}
+
+.login__container > h1 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 10px!important;
+}
+
+.login__container > form > h5 {
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+
+    font-family: "Amazon Ember",Arial,sans-serif;
+}
+
+.login__container > form > input {
+    margin-bottom: 7px;
+    width: 98%;
+    background-color: white;
+    height: 31px;
+    padding: 3px 7px;
+    line-height: normal;
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset;
+    outline: 0;
+}
+
+.login__container > p {
+    margin-top: 18px;
+    margin-bottom: 22px;
+    font-size: 12px!important;
+    line-height: 1.5!important;
+}
+
+.login__signInButton{
+    background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    border-color: #ADB1B8 #A2A6AC #8D9096;
+    border-style: solid;
+    border-width: 1px; 
+    font-size: 13px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.login__registerButton__container{
+    width: 350px;
+}
+
+.login__registerButton{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 14px!important;
+    cursor: pointer;
+    border-radius: 3px;
+    border-color: darkgray;
+    border-style: solid;
+    border-width: 1px; 
+    font-family: "Amazon Ember",Arial,sans-serif;
+    color: #111;
+    font-size: 13px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+
+}
+
+.login__container > p > a{
+    color: #0066c0;
+}
+.login__needHelp{
+    margin-left: -7px;  
+    cursor: pointer;  
+}
+
+.login__needHelp > span > a{
+    font-family: "Amazon Ember",Arial,sans-serif;
+    font-size: 13px;
+    line-height: 19px;
+    cursor: pointer;
+    color: #0066c0;
+}
+
+.signIn__newToAmazon{
+    width: 350px; 
+    text-align: center; 
+    border-bottom: 1px solid #e7e7e7; 
+    line-height: 0.1em;
+    margin-top: 34px;
+    margin-bottom: 14px;
+    font-size: 12px;
+    color: #767676;
+    font-weight: 400;
+}
+
+.signIn__newToAmazon > span{
+    background:#fff; 
+    padding:0 10px;
+}
+
+.signIn__footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 45px!important;
+    margin-bottom: -70px;
+    width: 350px;
+}
+
+.signIn__footer__firstLine{
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    text-align: center!important;
+    text-decoration: none;
+    color: #0066c0;
+    
+    
+}
+
+.signIn__footer__firstLine > a{
+    font-size: 11px!important;
+    line-height: 1.465!important;
+    color: #0066c0;
+}
+
+.signIn__footer__secondLine{
+    font-size: 11px!important;
+    line-height: 1.465!important;
+    color: #555!important;
+    font-family: "Amazon Ember",Arial,sans-serif;
+    text-align: center!important;
+}

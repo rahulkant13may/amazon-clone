@@ -5,6 +5,7 @@ import Header from './Header';
 import Home from './Home';
 import Checkout from './Checkout';
 import Login from './Login';
+import SignIn from './SignIn';
 import { useStateValue } from './context/StateContext';
 import { auth } from './firebase';
 
@@ -38,9 +39,13 @@ function App() {
     <Router>
     <div className="app">
       <Switch>
-        <Route path="/login">
+        {/* <Route path="/login">
           <Login/>
+        </Route> */}
+        <Route path="/signin">
+          <SignIn/>
         </Route>
+
         <Route path="/checkout">
            <Header/>
           <Checkout/>

@@ -2,6 +2,7 @@
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
+    width: max-content;
 }
 
 .home__row {

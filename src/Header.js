@@ -16,6 +16,19 @@ const login = () => {
         auth.signOut();
     }
 }
+
+const inputFocus = (event) => {
+    console.log("On Focus====>", event.target)
+    event.target.style.border = "1px solid orange"
+    event.target.style.boxShadow = "0 0 7px orange"
+}
+const inputBlur = (event) => {
+    console.log("On Focus====>", event.target)
+    event.target.style.background = "white";
+    event.target.style.border = "1px solid #a6a6a6"
+    event.target.style.boxShadow = "0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset"
+}
+
  return (
         <nav className="header">
             <Link to="/">
@@ -24,7 +37,7 @@ const login = () => {
                     src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"/>
             </Link>
             <div className="header__search">
-                <input type="text" className="header__searchInput"/>
+                <input type="text" onFocus={inputFocus} onBlur={inputBlur} className="header__searchInput"/>
                 <div className="header__search__button">
                     <SearchIcon className="header__searchIcon"/>
                 </div>

@@ -1,3 +1,7 @@
+::placeholder {
+    opacity: 1;
+    font-size: 13px;
+  }
 
 .signIn{
     display: flex;
@@ -94,6 +98,34 @@
     border-radius: 3px;
     box-shadow: 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset;
     outline: 0;
+}
+
+.passwordInfo, .passwordWarning{
+    margin-bottom: 7px;
+    text-align: left;
+    font-size: 12px;
+    line-height: 15px;
+    /* color: red; */
+}
+
+.passwordInfo > span:nth-of-type(1){
+    color: #8bb7e8;
+    font-size: 15px;
+    font-style: italic;
+    margin-right: 7px;
+
+}
+
+.passwordWarning > span:nth-of-type(1){
+    color: red;
+    font-size: 15px;
+    font-style: italic;
+    margin-right: 7px;  
+}
+
+.passwordWarning > span:nth-of-type(2){
+    color: red;
+    font-size: 15px;
 }
 
 .login__container > p {

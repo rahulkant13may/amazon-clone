@@ -37,6 +37,19 @@ function SignIn() {
          })
          .catch((e) => alert(event.message))
     }
+
+    const inputFocus = (event) => {
+        console.log("On Focus====>", event.target)
+        event.target.style.border = "1px solid orange"
+        event.target.style.boxShadow = "0 0 5px orange"
+    }
+    const inputBlur = (event) => {
+        console.log("On Focus====>", event.target)
+        event.target.style.background = "white";
+        event.target.style.border = "1px solid #a6a6a6"
+        event.target.style.boxShadow = "0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset"
+    }
+
     return (
     <div className="signIn">
         <div className="login">
@@ -53,7 +66,7 @@ function SignIn() {
                 <h1>Sign In</h1>
                 <form>
                     <h5>Email (phone for mobile accounts)</h5>
-                    <input value={email} onChange={event => setEmail(event.target.value)}type="text"/>
+                    <input value={email} onFocus={inputFocus} onBlur={inputBlur} onChange={event => setEmail(event.target.value)}type="text"/>
                     {/* <h5>Password</h5>
                     <input value={password} onChange={event => setPassword(event.target.value)} type="password"/> */}
                     <button onClick={continueButton} type="submit" className="login__signInButton">Continue</button>
@@ -84,7 +97,7 @@ function SignIn() {
                         <h5>Password</h5>
                         <h5>Forgot your password?</h5>
                     </div>
-                    <input value={password} onChange={event => setPassword(event.target.value)} type="password"/>
+                    <input value={password} onFocus={inputFocus} onBlur={inputBlur} onChange={event => setPassword(event.target.value)} type="password"/>
                     <button onClick={signInButton} type="submit" className="login__signInButton">Sign In</button>
                 </form>
                 <div className="password__keepSignIn">

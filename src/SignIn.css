@@ -31,7 +31,7 @@
     padding: 20px;
     border: 1px solid lightgray;
     border-radius: 4px;
-    
+    margin-bottom: 14px!important;
 }
 
 .login__container > h1 {
@@ -159,7 +159,7 @@
     color: #0066c0;
 }
 
-.password__keepSignIn{
+.register__signIn, .password__keepSignIn{
     display: flex;
     align-items: center;
     margin-top: 14px;
@@ -167,13 +167,13 @@
 .password__keepSignIn > input{
     margin-right: 5px;
 }
-.password__keepSignIn > span{
+.register__signIn, .password__keepSignIn > span{
     font-family: "Amazon Ember",Arial,sans-serif;
     font-size: 13px;
     line-height: 19px;
 }
 
-.password__keepSignIn > span > a{
+.register__signIn > span > a, .password__keepSignIn > span > a{
     font-family: "Amazon Ember",Arial,sans-serif;
     font-size: 13px;
     line-height: 19px;

@@ -14,7 +14,9 @@ function SignIn() {
 
     const continueButton = (event) => {
         event.preventDefault();
-        unSetSignEmailFlag(false)
+        if(email){
+            unSetSignEmailFlag(false)
+        }
     }
 
     const signInButton = (event) => {
@@ -94,10 +96,21 @@ function SignIn() {
 
 
         </div>
-        <h5 className="signIn__newToAmazon"><span>New to Amazon?</span></h5>
-        <div className="login__registerButton__container">
-           <button onClick={register} type="submit" className="login__registerButton">Create your Amazon Account</button>
-        </div>
+        {
+        signInEmailFlag
+        ?
+        <>
+            <h5 className="signIn__newToAmazon"><span>New to Amazon?</span></h5>
+            <div className="login__registerButton__container">
+                <Link to="register">
+                    <button type="submit" className="login__registerButton">Create your Amazon Account</button>
+                </Link>
+            </div>
+        </>
+        :
+        ''
+        }
+
 
         <div className="signIn__footer">
              <div className="signIn__footer__firstLine">

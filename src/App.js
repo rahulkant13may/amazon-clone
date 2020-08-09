@@ -6,6 +6,7 @@ import Home from './Home';
 import Checkout from './Checkout';
 import Login from './Login';
 import SignIn from './SignIn';
+import RegisterUser from './RegisterUser';
 import { useStateValue } from './context/StateContext';
 import { auth } from './firebase';
 
@@ -45,7 +46,9 @@ function App() {
         <Route path="/signin">
           <SignIn/>
         </Route>
-
+        <Route path="/register">
+          <RegisterUser/>
+        </Route>
         <Route path="/checkout">
            <Header/>
           <Checkout/>

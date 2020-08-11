@@ -35,6 +35,7 @@ const inputBlur = (event) => {
                 <img
                     className="header__logo"
                     src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"/>
+
             </Link>
             <div className="header__search">
                 <input type="text" onFocus={inputFocus} onBlur={inputBlur} className="header__searchInput"/>

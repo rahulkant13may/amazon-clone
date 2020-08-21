@@ -1,12 +1,11 @@
 import React, {useEffect} from 'react'
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Header from './Header';
-import Home from './Home';
-import Checkout from './Checkout';
-import Login from './Login';
-import SignIn from './SignIn';
-import RegisterUser from './RegisterUser';
+import Header from './components/Header';
+import Home from './components/Home';
+import Checkout from './components/Checkout';
+import SignIn from './components/SignIn';
+import RegisterUser from './components/RegisterUser';
 import { useStateValue } from './context/StateContext';
 import { auth } from './firebase';
 
